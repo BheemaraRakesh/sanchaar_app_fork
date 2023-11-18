@@ -1,14 +1,14 @@
 const express = require('express')
 const app = express()
 
-const mongoose = require('mongoose')
+// other imports
 const PORT = process.env.PORT || 3000
 
-mongoose.connect()
 
-app.get('/', (req, res) => {
-    res.json({ text: `Hello, ${process.env.NAME}!` })
-})
+// middleware
+app.use(express.json())
+
+app.use('/', require('./routes/defaultRoute'))
 
 app.listen(PORT, err => {
     if (err)
