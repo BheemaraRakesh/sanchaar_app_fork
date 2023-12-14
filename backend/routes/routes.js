@@ -7,8 +7,6 @@ const {
     handlePost
 } = require('../controllers/landingPageController')
 
-router.route('/')
-    .get(displayOnLandingPage)
-    .post(handlePost)
+router.get('/', displayOnLandingPage)
 
 module.exports = router
