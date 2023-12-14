@@ -15,5 +15,5 @@ app.listen(PORT, err => {
     if (err)
         console.error(err)
     else
-        console.info(`Server started at http://localhost:${PORT}`)
+        console.info(`Server running at http://localhost:${PORT}`)
 })
